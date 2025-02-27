@@ -172,7 +172,7 @@ print("Have a great day")
 ##
 color ="grey"
 try:
-    print(size)
+    print(hey)
 except NameError:
     print("Check the variable name")
     
@@ -204,3 +204,68 @@ except TypeError:
 finally:
     print("Need help? Contact us")
 ##
+####                    labdas
+# lambda functions are small anonymous functions that are defined using the lambda keyword
+greet = lambda name:"Welcome " + name
+
+print(greet("Kelvin"))
+
+
+
+
+
+##### decorators
+# decorators are functions that modify/ enhance the functionality of other functions
+# in python functions can be nested
+
+
+def greet(name):
+    print ("Hey", name)
+    
+    def welcome():
+        print("welcome on board!")
+        
+#
+
+# print (greet("Mutai"))                
+greet("Mutai")            
+
+# you can also return the rresult of the nested function directly from within the body of the parent function
+def greet(name):
+    print("Hey", name)
+    
+    def account():
+        return "Your account is created"
+    
+    message = account()
+    return message
+print(greet("Kelvin K"))
+#  decorators 
+
+def greet():
+    return "Welcome"
+def uppercase(func):
+    #wrapper function to keep the original function unchanged
+    def wrapper():
+        original_message = func()
+        modified_result = original_message.upper()
+        return modified_result
+    return wrapper
+greet_upper = uppercase(greet)
+print(greet_upper())
+
+
+# def greet():
+#     return "Welcome"
+# def uppercase(func):
+#     #wrapper function to keep the original function unchanged
+#     def wrapper():
+#         original_message = func()
+#         modified_result = original_message.upper()
+#         return modified_result
+# @uppercase
+# def greet():
+#     return "Welcome"
+# # using the decorated function
+
+# print(greet())
