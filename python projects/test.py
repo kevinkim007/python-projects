@@ -269,3 +269,132 @@ print(greet_upper())
 # # using the decorated function
 
 # print(greet())
+
+# You can easily check a variable’s data type using the type() function:
+age= 25
+print("Data type:",type(age))       # Outputs: <class 'int'>
+
+# Control Flow - Making Decisions! 🧠
+
+# Python can make decisions based on certain conditions, using if-else statements. This is called control flow—it helps us control how our code runs.
+
+
+temperature = 30
+
+if temperature > 25:
+    print("It’s a hot day! ☀️")
+else:
+    print("It’s a cool day! ❄️")
+    
+
+# Control flow example for grading student marks
+# This will ask the user for input and grade the student's performance
+
+# Prompt the user for student marks
+marks = int(input("Enter the student's marks (0-100): "))
+
+# Grading system based on the marks
+if marks > 70:
+    print("Grade: Distinction 🏆")
+elif marks >= 60:
+    print("Grade: Credit 🎖️")
+elif marks >= 50:
+    print("Grade: Pass 👍")
+else:
+    print("Grade: Fail ❌")
+    
+# For Loop: Used for repeating tasks over a range.
+
+# Repeats a block of code a fixed number of times.
+
+# Print numbers 0 to 4
+for i in range(5):
+    print(i)
+    
+    
+# While Loop: Runs as long as a condition is True.
+
+# Repeats as long as a condition is true.
+
+
+countdown = 5
+
+while countdown > 0:
+    print("Counting down:", countdown)
+    countdown -= 1
+
+print("Blast off! 🚀")
+
+# Lists 📋
+# Ordered collections that are mutable (changeable). Great for storing multiple items.
+
+# A list is like a collection of items (e.g., a shopping list).
+
+
+
+fruits = ["apple", "banana", "cherry"]
+
+# Accessing elements
+print(fruits[0])  # Outputs: apple
+
+# Modifying an element
+fruits[1] = "orange"
+print(fruits)  # Outputs: ['apple', 'orange', 'cherry']
+
+# Adding an element
+fruits.append("grape")
+print(fruits)  # Outputs: ['apple', 'orange', 'cherry', 'grape']
+
+# Tuples 🔒
+# Similar to lists but immutable (unchangeable).
+
+# Tuples are like lists, but unchangeable. Once created, you can’t modify them.
+
+
+
+coordinates = (10, 20)
+
+# Accessing elements
+print(coordinates[0])  # Outputs: 10
+
+# Trying to modify a tuple will raise an error:
+# coordinates[0] = 5  # Error! Tuples can't be modified.
+
+# Sets 🔄
+# Unordered collections of unique elements.
+
+# A set is a collection of unique items (no duplicates allowed).
+
+
+unique_numbers = {1, 2, 2, 3, 4}
+
+print(unique_numbers)  # Outputs: {1, 2, 3, 4} (Notice that 2 is only included once)
+
+# Dictionaries 📖
+# Store key-value pairs. Think of it as a real-life dictionary, where you look up a word (key) to get its definition (value).
+
+# A dictionary is like a phonebook—it stores key-value pairs.
+
+
+
+student_info = {"name": "Charlie", 
+                "age": 21, 
+                "grade": "A"}
+
+# Accessing a value by its key
+print(student_info["name"])  # Outputs: Charlie
+
+# Modifying a value
+student_info["age"] = 22
+print(student_info)  # Outputs: {'name': 'Charlie', 'age': 22, 'grade': 'A'}
+
+#Functions are blocks of reusable code—they save you from repeating the same code over and over. Think of functions like superpowers you can call whenever you need them! 💪
+
+
+# Defining a function
+def greet(name):
+    print("Hello, " + name + "! 👋")
+
+# Calling the function
+greet("Alice")  # Outputs: Hello, Alice! 👋
+greet("Bob")    # Outputs: Hello, Bob! 👋
